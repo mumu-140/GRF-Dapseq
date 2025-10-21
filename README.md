@@ -4,6 +4,13 @@ A reproducible, single-node DAP-seq processing pipeline wrapping common best-pra
 quality control and trimming, alignment, duplicate handling, peak calling, and annotation.
 
 ## Quick Start
+## 2. Quick Start (3 min)
+
+| Step | What you do |
+|------|-------------|
+| 1. Clone & enter repo | `git clone https://github.com/YOUR-LAB/DAP-seq-84K.git && cd DAP-seq-84K` |
+| 2. Edit config | `vim DapSeq-84K.sh` → change the top 10 variables (see §3) |
+| 3. Run | `bash DapSeq-84K.sh 2>&1 | tee run.log` |
 
 ```bash
 # Run the pipeline
