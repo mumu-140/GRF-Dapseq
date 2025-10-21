@@ -22,12 +22,6 @@ bash DapSeq-84K.sh
 ### Outputs
 Cleaned FASTQ, alignment (.sam/.bam), sorted/deduplicated BAMs, peak calls (MACS2), peaks and annotation tables.
 
-
-Here’s your refined and publication-ready Markdown section.
-It preserves your scientific precision but improves typographic clarity, alignment, and flow for inclusion in your README or supplementary documentation.
-
----
-
 #### Narrow Peaks Format
 
 The **NarrowPeak** file format is an extended **BED6 + 4** convention, widely produced by **MACS2** for narrow-peak assays such as DAP-seq, ChIP-seq, and transcription-factor binding analyses.
