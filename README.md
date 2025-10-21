@@ -8,7 +8,7 @@ quality control and trimming, alignment, duplicate handling, peak calling, and a
 ```bash
 # Run the pipeline
 bash DapSeq-84K.sh
-
+```
 ## Input / Output
 ### Inputs
 - Reads: Paired-end FASTQ(.gz); replicate layout expected by the script (e.g., SampleX_R1_rep1.fq.gz, SampleX_R2_rep1.fq.gz, etc.).
