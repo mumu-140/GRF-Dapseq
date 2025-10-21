@@ -4,14 +4,16 @@ A reproducible, single-node DAP-seq processing pipeline wrapping common best-pra
 quality control and trimming, alignment, duplicate handling, peak calling, and annotation.
 
 ## Quick Start
-1. Clone & enter repo
-```git clone git clone https://github.com/mumu-140/GRF-Dapseq.git```
-3. Edit config
+1. Clone/Download & enter repo
+```git clone https://github.com/mumu-140/GRF-Dapseq.git```
+
+2. Edit config
 ```shell
 vim DapSeq-84K.sh
+
+#-------------------------------------DapSeq-84K.sh------------------------------
 change the variables
 
-# ------------------------------ Step 0: Initialize Parameters and Directory Structure ------------------------------
 # Set working directory
 WORKDIR=$(pwd)
 # Script directory
@@ -20,6 +22,7 @@ Script_DIR=${WORKDIR}/scripts
 name="SampleX"  # Replace with the actual sample prefix
 ...
 ...
+
 ```
 
 3. Run DapSeq-84K.sh
