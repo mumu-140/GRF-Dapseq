@@ -9,6 +9,8 @@ quality control and trimming, alignment, duplicate handling, peak calling, and a
 # Run the pipeline
 bash DapSeq-84K.sh
 ```
+
+
 ## Input / Output
 ### Inputs
 - Reads: Paired-end FASTQ(.gz); replicate layout expected by the script (e.g., SampleX_R1_rep1.fq.gz, SampleX_R2_rep1.fq.gz, etc.).
@@ -16,10 +18,15 @@ bash DapSeq-84K.sh
 - GTF/GFF for downstream R-based annotation.
 - Paths are read from variables inside DapSeq-84K.sh. Edit those variables to point to your data.
 
+
 ### Outputs
 Cleaned FASTQ, alignment (.sam/.bam), sorted/deduplicated BAMs, peak calls (MACS2), peaks and annotation tables.
-- Narrow Peaks Format
+
+
+#### Narrow Peaks Format
 The NarrowPeak file format is an extended BED6+4 format commonly produced by MACS2 for narrow peak detection assays such as DAP-seq, ChIP-seq, and transcription factor binding analysis. Each line represents a called peak and contains 10 tab-delimited columns:
+
+
 *Column*	*Name*	*Description*
 1	chrom	Chromosome or scaffold identifier
 2	chromStart	Peak start coordinate (0-based)
@@ -31,6 +38,8 @@ The NarrowPeak file format is an extended BED6+4 format commonly produced by MAC
 8	pValue	–log10 transformed p-value for the peak significance
 9	qValue	–log10 transformed q-value (FDR corrected)
 10	peak	Offset (in bp) of the summit position relative to chromStart (–1 if not available)
+
+
 > chr1    345000    345250    Peak_001    500    .    25.3    7.2    6.8    120
 
-- *IDR Outputs:* reference https://github.com/nboley/idr
+#### *IDR Outputs:* reference https://github.com/nboley/idr
