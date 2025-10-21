@@ -9,7 +9,7 @@ quality control and trimming, alignment, duplicate handling, peak calling, and a
 # Run the pipeline
 bash DapSeq-84K.sh
 ```
-
+---
 
 ## Input / Output
 ### Inputs
@@ -48,7 +48,6 @@ chr1    345000    345250    Peak_001    500    .    25.3    7.2    6.8    120
 
 This format ensures compatibility with standard genomic tools and browsers (e.g., UCSC Genome Browser, IGV) and facilitates downstream annotation using utilities such as **ChIPseeker**, **HOMER**, or **BEDTools**.
 
----
 
 #### IDR Outputs
 
