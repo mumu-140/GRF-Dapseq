@@ -23,23 +23,40 @@ bash DapSeq-84K.sh
 Cleaned FASTQ, alignment (.sam/.bam), sorted/deduplicated BAMs, peak calls (MACS2), peaks and annotation tables.
 
 
+Here’s your refined and publication-ready Markdown section.
+It preserves your scientific precision but improves typographic clarity, alignment, and flow for inclusion in your README or supplementary documentation.
+
+---
+
 #### Narrow Peaks Format
-The NarrowPeak file format is an extended BED6+4 format commonly produced by MACS2 for narrow peak detection assays such as DAP-seq, ChIP-seq, and transcription factor binding analysis. Each line represents a called peak and contains 10 tab-delimited columns:
 
+The **NarrowPeak** file format is an extended **BED6 + 4** convention, widely produced by **MACS2** for narrow-peak assays such as DAP-seq, ChIP-seq, and transcription-factor binding analyses.
+Each record (one line per called peak) contains **10 tab-delimited columns** as described below:
 
-*Column*	*Name*	*Description*
-1	chrom	Chromosome or scaffold identifier
-2	chromStart	Peak start coordinate (0-based)
-3	chromEnd	Peak end coordinate (exclusive)
-4	name	Peak name or ID
-5	score	Integer score (0–1000) for browser display
-6	strand	Strand information (+, -, or . if not applicable)
-7	signalValue	Enrichment signal or average pileup across the peak
-8	pValue	–log10 transformed p-value for the peak significance
-9	qValue	–log10 transformed q-value (FDR corrected)
-10	peak	Offset (in bp) of the summit position relative to chromStart (–1 if not available)
+| **Column** | **Name**      | **Description**                                                                    |
+| ---------- | ------------- | ---------------------------------------------------------------------------------- |
+| 1          | `chrom`       | Chromosome or scaffold identifier                                                  |
+| 2          | `chromStart`  | Peak start coordinate (0-based)                                                    |
+| 3          | `chromEnd`    | Peak end coordinate (exclusive)                                                    |
+| 4          | `name`        | Peak name or unique ID                                                             |
+| 5          | `score`       | Integer score (0–1000) for genome browser visualization                            |
+| 6          | `strand`      | Strand information (`+`, `−`, or `.` if not applicable)                            |
+| 7          | `signalValue` | Enrichment signal or average pileup across the peak                                |
+| 8          | `pValue`      | −log₁₀-transformed *p*-value representing peak significance                        |
+| 9          | `qValue`      | −log₁₀-transformed *q*-value (FDR-corrected)                                       |
+| 10         | `peak`        | Offset (in bp) of the summit position relative to `chromStart` (−1 if unavailable) |
 
+**Example:**
 
-> chr1    345000    345250    Peak_001    500    .    25.3    7.2    6.8    120
+```text
+chr1    345000    345250    Peak_001    500    .    25.3    7.2    6.8    120
+```
 
-#### *IDR Outputs:* reference https://github.com/nboley/idr
+This format ensures compatibility with standard genomic tools and browsers (e.g., UCSC Genome Browser, IGV) and facilitates downstream annotation using utilities such as **ChIPseeker**, **HOMER**, or **BEDTools**.
+
+---
+
+#### IDR Outputs
+
+For reproducible peak-ranking and replicate concordance assessment, the pipeline supports **Irreproducible Discovery Rate (IDR)** analysis.
+Detailed specifications and implementation are available in the [NBoley IDR repository](https://github.com/nboley/idr).
