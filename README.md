@@ -5,8 +5,8 @@ quality control and trimming, alignment, duplicate handling, peak calling, and a
 
 ## Quick Start
 1. Clone & enter repo
-```git clone https://github.com/YOUR-LAB/DAP-seq-84K.git && cd DAP-seq-84K```
-2. Edit config
+```git clone git clone https://github.com/mumu-140/GRF-Dapseq.git```
+3. Edit config
 ```shell
 vim DapSeq-84K.sh
 change the variables
