@@ -18,3 +18,4 @@ bash DapSeq-84K.sh
 
 ### Outputs
 Cleaned FASTQ, alignment (.sam/.bam), sorted/deduplicated BAMs, peak calls (MACS2), peaks and annotation tables.
+*IDR Outputs:* reference https://github.com/nboley/idr
