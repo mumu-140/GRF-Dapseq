@@ -52,3 +52,24 @@ This format ensures compatibility with standard genomic tools and browsers (e.g.
 
 For reproducible peak-ranking and replicate concordance assessment, the pipeline supports **Irreproducible Discovery Rate (IDR)** analysis.
 Detailed specifications and implementation are available in the [NBoley IDR repository](https://github.com/nboley/idr).
+ Here’s a clear, publication-quality Markdown section describing the **ChIPseeker** output format — suitable for inclusion in your `README.md` or a methods supplement.
+
+### Annotation Output Format
+
+The **ChIPseeker** R package provides structured peak annotation results in both tabular and graphical forms.
+The typical columns include:
+
+| **Name**                | **Description**                                                                          |
+| ----------------------- | ---------------------------------------------------------------------------------------- |
+| `seqnames`              | Chromosome name (e.g., `chr1`, `chrX`)                                                   |
+| `start`                 | Start coordinate of the peak (1-based)                                                   |
+| `end`                   | End coordinate of the peak                                                               |
+| `width`                 | Peak length (`end - start + 1`)                                                          |
+| `strand`                | DNA strand information (`+`, `-`, or `*`)                                                |
+| `annotation`            | Functional annotation category (e.g., *Promoter (≤1kb)*, *Exon*, *Intron*, *Intergenic*) |
+| `geneChr`               | Chromosome of the associated gene                                                        |
+| `geneStart` / `geneEnd` | Gene coordinates                                                                         |
+| `geneLength`            | Length of the associated gene                                                            |
+| `geneId`                | Ensembl or Entrez gene identifier                                                        |
+| `transcriptId`          | Transcript identifier linked to the gene                                                 |
+| `distanceToTSS`         | Signed distance from peak center to the transcription start site (TSS)                   |
